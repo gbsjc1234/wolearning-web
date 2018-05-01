@@ -28,3 +28,9 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+1.md文本编辑器
+>npm install mavon-editor --save
+2. 富文本编辑器
+>npm install vue-quill-editor --save
+
