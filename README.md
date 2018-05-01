@@ -31,6 +31,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 1.md文本编辑器
 >npm install mavon-editor --save
+>参考地址：https://github.com/hinesboy/mavonEditor
 2. 富文本编辑器
 >npm install vue-quill-editor --save
 
