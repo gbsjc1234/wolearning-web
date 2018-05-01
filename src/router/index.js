@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import MdEditor from '@/pages/mdEditor'
+import QuillEditor from '@/components/editors/QuillEditor'
 
 Vue.use(Router)
 
@@ -16,6 +17,11 @@ export default new Router({
       path: '/mdEditor',
       name: 'MdEditor',
       component: MdEditor
+    },
+    {
+      path: '/quillEditor',
+      name: 'QuillEditor',
+      component: QuillEditor
     }
   ]
 })
