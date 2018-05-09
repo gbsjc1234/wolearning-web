@@ -1,27 +1,12 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import MdEditor from '@/pages/mdEditor'
-import QuillEditor from '@/components/editors/QuillEditor'
+import HelloWorld from '../components/HelloWorld.vue'
+// import LoginPage from '../pages/login.vue'
+import LoginRoute from './login'
 
-Vue.use(Router)
-
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    },
-    {
-      path: '/mdEditor',
-      name: 'MdEditor',
-      component: MdEditor
-    },
-    {
-      path: '/quillEditor',
-      name: 'QuillEditor',
-      component: QuillEditor
-    }
-  ]
-})
+export default [
+  ...LoginRoute,
+  {
+    path: '/',
+    name: 'HelloWorld',
+    component: HelloWorld
+  }
+]
