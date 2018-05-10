@@ -4,17 +4,16 @@
     <i-header>
       Header
     </i-header>
-
     <layout>
       <sider>
-        <scroll>
-          <card v-for="(item, index) in siderList" :key="index" class="page-main-card">
-            {{item}}
+        <scroller>
+          <card v-for="(item, index) in siderList" :key="index" class="page-main-card" @click.native="clickItem(item.link)">
+            {{item.title}}
           </card>
-        </scroll>
+        </scroller>
       </sider>
       <i-content>
-        content
+          <router-view></router-view>
       </i-content>
     </layout>
 
@@ -26,9 +25,20 @@
 <script>
 export default {
   name: 'main-frame',
+  components: {
+  },
   data () {
     return {
-      siderList: ['用户管理', '添加随笔', '文章管理']
+      siderList: [
+        {title: '用户管理', link: '/mainFrame/'},
+        {title: '添加随笔', link: '/mainFrame/writeContent'},
+        {title: '文章管理', link: '/mainFrame/'}
+      ]
+    }
+  },
+  methods: {
+    clickItem (link) {
+      this.$router.push(link)
     }
   }
 
@@ -44,13 +54,24 @@ export default {
     background-color: white;
   }
   .ivu-layout-has-sider {
-    min-height:300px;
+    min-height:600px;
+  }
+  .ivu-layout-content {
+    min-height: 600px;
   }
   .page-main-card {
-    margin: 5px 10px;
+    cursor: pointer;
+    height:45px;
+    &:hover {
+      background-color: #f8f8f8;
+    }
     .ivu-card-body {
+      text-align: center;
       padding-top: 8px;
       padding-bottom: 8px;
+    }
+    &.ivu-card-bordered {
+      border-width: 0px;
     }
   }
 }

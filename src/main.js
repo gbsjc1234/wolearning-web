@@ -7,7 +7,8 @@ import ElementUI from 'element-ui'
 import VueRouter from 'vue-router'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
-
+import VueScroller from 'vue-scroller'
+Vue.use(VueScroller)
 Vue.use(VueRouter)
 Vue.use(iView)
 Vue.use(ElementUI)
