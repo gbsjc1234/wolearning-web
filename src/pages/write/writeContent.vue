@@ -1,9 +1,19 @@
 <template>
-  <div>
-    <div>选择编辑器</div>
+  <div class="wl-write-content">
+    <div class="wl-write-head">
+      <i-select v-model="editorType" class="wl-write-select">
+        <i-option v-for="item in editorList" :value="item.value" :key="item.value">{{item.label}}</i-option>
+      </i-select>
+      <i-button type="ghost" class="el-write-save">
+        保存草稿
+      </i-button>
+      <i-button type="primary" class="el-write-save">
+        发布
+      </i-button>
+    </div>
     <div>
-      <md-editor v-if="isMdEditor"></md-editor>
-      <quill-editor v-if="!isMdEditor"></quill-editor>
+      <md-editor v-if="editorType=='md'"></md-editor>
+      <quill-editor v-if="editorType=='quill'"></quill-editor>
     </div>
   </div>
 </template>
@@ -17,12 +27,37 @@ export default {
   },
   data () {
     return {
-      isMdEditor: true
+      isMdEditor: true,
+      editorType: 'md',
+      editorList: [
+        {value: 'md', label: 'md编辑器'},
+        {value: 'quill', label: '富文本编辑器'}
+      ]
     }
   }
 }
 </script>
 
-<style>
+<style lang="less">
+.wl-write-content {
+  background-color: white;
+  .wl-write-head {
+    height: 60px;
+    .wl-write-select {
+      width: 200px;
+      display: inline-block;
+      float: left;
+      margin-left: 20px;
+      .ivu-select-dropdown {
+        z-index: 10000;
+      }
+    }
+    .el-write-save {
+      display: inline-block;
+      float: right;
+      margin-right: 20px;
+    }
 
+  }
+}
 </style>
