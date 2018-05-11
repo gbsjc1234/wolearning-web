@@ -32,7 +32,8 @@ export default {
       siderList: [
         {title: '用户管理', link: '/mainFrame/'},
         {title: '添加随笔', link: '/mainFrame/writeContent'},
-        {title: '文章管理', link: '/mainFrame/'}
+        {title: '文章管理', link: '/mainFrame/'},
+        {title: '系统管理', link: '/mainFrame/settings'}
       ]
     }
   },
