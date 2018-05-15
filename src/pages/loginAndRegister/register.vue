@@ -141,5 +141,4 @@ export default {
     background-color: #a4a4a4;
     border: #f2f2f2;
   }
-
 </style>
