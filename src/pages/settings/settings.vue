@@ -1,14 +1,19 @@
 <template>
+  <div>
   <tree :data="data2" show-checkbox
         @on-check-change="onCheckChange"
         @on-select-change="onSelectChange"
   ></tree>
+    <i-input v-model="newNodeName" class="wl-new-node"></i-input>
+    <i-button type="primary">添加新节点</i-button>
+  </div>
 </template>
 <script>
 export default {
   data () {
     return {
       selectedNode: null,
+      newNodeName: '',
       data2: [
         {
           title: 'parent 1',
@@ -54,3 +59,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  .wl-new-node {
+    width: 200px;
+  }
+</style>
