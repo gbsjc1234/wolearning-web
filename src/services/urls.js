@@ -1,5 +1,5 @@
 // 系统管理
 export default {
-  sysManage: '/sysManage',
+  sysManage: 'sysManage',
   addNodeToClassificationTree: '/addNodeToClassificationTree'
 }

@@ -16,7 +16,7 @@ const baseDir = window.baseDir
 // }
 
 const Post = (url, data, successFun, errorFun) => {
-  axios.post(baseDir + url, data).then((data) => {
+  axios.post(baseDir + url, data, {'Content-Type': 'application/x-www-form-urlencoded'}).then((data) => {
     if (successFun) {
       successFun(data)
     }
@@ -27,4 +27,4 @@ const Post = (url, data, successFun, errorFun) => {
   })
 }
 // 系统设置
-export const AddNewNodeToBlog = (data, successFun, errorFun) => Post(Urls.sysManage + Urls.addNodeToClassificationTree, successFun, errorFun)
+export const AddNewNodeToBlog = (data, successFun, errorFun) => Post(Urls.sysManage + Urls.addNodeToClassificationTree, data, successFun, errorFun)

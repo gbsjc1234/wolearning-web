@@ -64,10 +64,9 @@ export default {
           return
         }
         let parentKey = this.selectedNode.childrenKey
-        let params = {
-          parentCode: parentKey,
-          name: this.newNodeName
-        }
+        let params = new FormData()
+        params.append('parentCode', parentKey)
+        params.append('name', this.newNodeName)
         AddNewNodeToBlog(params, (data) => {
           console.log(data)
         }, (error) => {
