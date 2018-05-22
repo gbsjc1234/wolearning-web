@@ -9,46 +9,19 @@
   </div>
 </template>
 <script>
-import {AddNewNodeToBlog} from '../../services/getData'
+import {AddNewNodeToBlog, GetAllArticalNode} from '../../services/getData'
 export default {
   data () {
     return {
       selectedNode: null,
       newNodeName: '',
       data2: [
-        {
-          title: '文章分类管理',
-          expand: true,
-          childrenKey: '000',
-          children: [
-            {
-              title: 'parent 1-1',
-              expand: true,
-              children: [
-                {
-                  title: 'leaf 1-1-1'
-                },
-                {
-                  title: 'leaf 1-1-2'
-                }
-              ]
-            },
-            {
-              title: 'parent 1-2',
-              expand: true,
-              children: [
-                {
-                  title: 'leaf 1-2-1'
-                },
-                {
-                  title: 'leaf 1-2-1'
-                }
-              ]
-            }
-          ]
-        }
+
       ]
     }
+  },
+  mounted () {
+    this.getAllNodes()
   },
   methods: {
     onCheckChange (node) {
@@ -68,11 +41,35 @@ export default {
         params.append('parentCode', parentKey)
         params.append('name', this.newNodeName)
         AddNewNodeToBlog(params, (data) => {
-          console.log(data)
+          if (data.data.code === 0) {
+            this.getAllNodes()
+            this.$Notice.open({
+              title: '提示',
+              desc: '添加子节点成功'
+            })
+          } else {
+            this.$Notice.open({
+              title: '提示',
+              desc: '添加子节点失败'
+            })
+          }
         }, (error) => {
           console.log(error)
         })
       }
+    },
+    getAllNodes () {
+      GetAllArticalNode({}, (data) => {
+        if (data.data.code === 0) {
+          data.data.data.expand = true
+          this.data2 = [data.data.data]
+          console.log(this.data2)
+        } else {
+
+        }
+      }, (error) => {
+        console.log(error)
+      })
     }
   }
 }

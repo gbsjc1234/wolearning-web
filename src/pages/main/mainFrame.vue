@@ -30,7 +30,7 @@ export default {
   data () {
     return {
       siderList: [
-        {title: '用户管理', link: '/mainFrame/'},
+        {title: '用户管理', link: '/mainFrame/userManage'},
         {title: '添加随笔', link: '/mainFrame/writeContent'},
         {title: '文章管理', link: '/mainFrame/'},
         {title: '系统管理', link: '/mainFrame/settings'}
