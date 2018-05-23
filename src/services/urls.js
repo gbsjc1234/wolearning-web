@@ -6,5 +6,9 @@ export default {
   getAllUserAccount: '/getAllUserAccount',
   findUserByCondition: '/findUserByCondition',
   deleteUserAccountByName: '/deleteUserAccountByName',
-  updateUserAccountByName: '/updateUserAccountByName'
+  updateUserAccountByName: '/updateUserAccountByName',
+  // 用户登录注册相关的
+  userAccount: 'userAccount',
+  login: '/login'
+
 }

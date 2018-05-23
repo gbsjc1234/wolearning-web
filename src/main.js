@@ -8,7 +8,9 @@ import VueRouter from 'vue-router'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
 import VueScroller from 'vue-scroller'
+import Vuex from 'vuex'
 
+Vue.use(Vuex)
 Vue.use(VueScroller)
 Vue.use(VueRouter)
 Vue.use(iView)
@@ -19,6 +21,7 @@ const RouterConfig = {
   routes: Routers
 }
 const router = new VueRouter(RouterConfig)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

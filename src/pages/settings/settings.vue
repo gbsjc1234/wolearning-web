@@ -41,7 +41,7 @@ export default {
         params.append('parentCode', parentKey)
         params.append('name', this.newNodeName)
         AddNewNodeToBlog(params, (data) => {
-          if (data.data.code === 0) {
+          if (data.code === 0) {
             this.getAllNodes()
             this.$Notice.open({
               title: '提示',
@@ -60,9 +60,10 @@ export default {
     },
     getAllNodes () {
       GetAllArticalNode({}, (data) => {
-        if (data.data.code === 0) {
-          data.data.data.expand = true
-          this.data2 = [data.data.data]
+        console.log(data)
+        if (data.code === 0) {
+          data.data.expand = true
+          this.data2 = [data.data]
           console.log(this.data2)
         } else {
 
