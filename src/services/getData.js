@@ -30,3 +30,11 @@ const Post = (url, data, successFun, errorFun) => {
 export const AddNewNodeToBlog = (data, successFun, errorFun) => Post(Urls.sysManage + Urls.addNodeToClassificationTree, data, successFun, errorFun)
 
 export const GetAllArticalNode = (data, successFun, errorFun) => Get(Urls.sysManage + Urls.getAllNodes, data, successFun, errorFun)
+
+export const GetAllUserAccount = (data, successFun, errorFun) => Get(Urls.sysManage + Urls.getAllUserAccount, data, successFun, errorFun)
+
+export const FindUserByCondition = (data, successFun, errorFun) => Get(Urls.sysManage + Urls.findUserByCondition, data, successFun, errorFun)
+
+export const DeleteUserAccountByName = (data, successFun, errorFun) => Get(Urls.sysManage + Urls.deleteUserAccountByName, data, successFun, errorFun)
+
+export const UpdateUserAccountByName = (data, successFun, errorFun) => Get(Urls.sysManage + Urls.updateUserAccountByName, data, successFun, errorFun)

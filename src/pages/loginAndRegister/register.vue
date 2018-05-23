@@ -12,7 +12,7 @@
         <formItem label="密码" prop="password">
           <i-input  placeholder="输入你的密码"  type="password" v-model="formValidate.password" class="page-register-input"></i-input>
         </formItem>
-        <formItem label="重复密码" prop="replyPassword">
+        <formItem label="确认密码" prop="replyPassword">
           <i-input  placeholder="重复输入你的密码"  type="password" v-model="formValidate.replyPassword" class="page-register-input"></i-input>
         </formItem>
         <FormItem>
@@ -101,7 +101,10 @@ export default {
 </script>
 
 <style>
-  body{
+  body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
     background-color: #666;
   }
 
@@ -126,6 +129,7 @@ export default {
     font: 700 16px/30px 'microsoft yahei';
     padding-bottom: 10px;
     color: #666;
+    cursor: default;
   }
 
   .page-register-register {

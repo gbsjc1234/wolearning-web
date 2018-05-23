@@ -2,5 +2,9 @@
 export default {
   sysManage: 'sysManage',
   addNodeToClassificationTree: '/addNodeToClassificationTree',
-  getAllNodes: '/getAllArticalNode'
+  getAllNodes: '/getAllArticalNode',
+  getAllUserAccount: '/getAllUserAccount',
+  findUserByCondition: '/findUserByCondition',
+  deleteUserAccountByName: '/deleteUserAccountByName',
+  updateUserAccountByName: '/updateUserAccountByName'
 }
