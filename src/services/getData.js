@@ -37,4 +37,4 @@ export const FindUserByCondition = (data, successFun, errorFun) => Get(Urls.sysM
 
 export const DeleteUserAccountByName = (data, successFun, errorFun) => Get(Urls.sysManage + Urls.deleteUserAccountByName, data, successFun, errorFun)
 
-export const UpdateUserAccountByName = (data, successFun, errorFun) => Get(Urls.sysManage + Urls.updateUserAccountByName, data, successFun, errorFun)
+export const UpdateUserAccountByName = (data, successFun, errorFun) => Post(Urls.sysManage + Urls.updateUserAccountByName, data, successFun, errorFun)
