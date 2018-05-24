@@ -8,18 +8,35 @@
       <i-input v-model="password" clearable class="page-login-input">
        <span slot="prepend">密码</span>
       </i-input>
-      <i-button type="primary" class="page-login-login">登录</i-button>
+      <i-button type="primary" class="page-login-login" @click="login">登录</i-button>
       <i-button class="page-login-login">注册</i-button>
     </div>
   </div>
 </template>
 
 <script>
+import {UserLogin} from '../../services/getData'
 export default {
   data () {
     return {
       userName: '',
       password: ''
+    }
+  },
+  methods: {
+    login () {
+      let params = new FormData()
+      params.append('username', this.userName)
+      params.append('password', this.password)
+      UserLogin(params, (data) => {
+        if (data.code === 0) {
+          let token = data.data.token
+          localStorage.setItem('token', token)
+          this.$router.replace('/mainFrame')
+        }
+      }, (error) => {
+        console.log(error)
+      })
     }
   },
   computed: {

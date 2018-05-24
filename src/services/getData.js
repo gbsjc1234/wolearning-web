@@ -31,10 +31,10 @@ export const AddNewNodeToBlog = (data, successFun, errorFun) => Post(Urls.sysMan
 
 export const GetAllArticalNode = (data, successFun, errorFun) => Get(Urls.sysManage + Urls.getAllNodes, data, successFun, errorFun)
 
-export const GetAllUserAccount = (data, successFun, errorFun) => Get(Urls.userManage + Urls.getAllUserAccount, data, successFun, errorFun)
+export const GetAllUserAccount = (data, successFun, errorFun) => Get(Urls.sysManage + Urls.getAllUserAccount, data, successFun, errorFun)
 
-export const FindUserByCondition = (data, successFun, errorFun) => Get(Urls.userManage + Urls.findUserByCondition, data, successFun, errorFun)
+export const FindUserByCondition = (data, successFun, errorFun) => Get(Urls.sysManage + Urls.findUserByCondition, data, successFun, errorFun)
 
-export const DeleteUserAccountByName = (data, successFun, errorFun) => Get(Urls.userManage + Urls.deleteUserAccountByName, data, successFun, errorFun)
+export const DeleteUserAccountByName = (data, successFun, errorFun) => Get(Urls.sysManage + Urls.deleteUserAccountByName, data, successFun, errorFun)
 
-export const UpdateUserAccountByName = (data, successFun, errorFun) => Post(Urls.userManage + Urls.updateUserAccountByName, data, successFun, errorFun)
+export const UpdateUserAccountByName = (data, successFun, errorFun) => Post(Urls.sysManage + Urls.updateUserAccountByName, data, successFun, errorFun)
