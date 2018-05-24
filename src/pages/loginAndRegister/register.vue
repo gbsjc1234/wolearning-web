@@ -13,7 +13,7 @@
           <i-input  placeholder="输入你的密码"  type="password" v-model="formValidate.password" class="page-register-input"></i-input>
         </formItem>
         <formItem label="确认密码" prop="replyPassword">
-          <i-input  placeholder="重复输入你的密码"  type="password" v-model="formValidate.replyPassword" class="page-register-input"></i-input>
+          <i-input  placeholder="重复输入你的密码" type="password" v-model="formValidate.replyPassword" class="page-register-input"></i-input>
         </formItem>
         <FormItem>
           <i-button type="primary" class="page-register-register" @click="handleSubmit('formValidate')">提交</i-button>

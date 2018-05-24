@@ -112,7 +112,7 @@ export default {
         },
         {
           title: '用户状态',
-          key: 'isDeleted'
+          key: 'deleted'
         },
         {
           title: '操作',
@@ -169,14 +169,14 @@ export default {
         authority: ''
       },
       userData: [
-        {name: 'admin1', nickName: 'jack', 'role': '管理员', 'authority': 'averageUser', 'createTime': '2018-5-21', 'modifyTime': '-', 'isDeleted': '有效'},
-        {name: 'admin2', nickName: 'jack', 'role': '管理员', 'authority': 'averageUser', 'createTime': '2018-5-21', 'modifyTime': '-', 'isDeleted': '有效'},
-        {name: 'admin3', nickName: 'jack', 'role': '管理员', 'authority': 'averageUser', 'createTime': '2018-5-21', 'modifyTime': '-', 'isDeleted': '有效'},
-        {name: 'admin4', nickName: 'jack', 'role': '管理员', 'authority': 'averageUser', 'createTime': '2018-5-21', 'modifyTime': '-', 'isDeleted': '有效'},
-        {name: 'admin5', nickName: 'jack', 'role': '管理员', 'authority': 'averageUser', 'createTime': '2018-5-21', 'modifyTime': '-', 'isDeleted': '有效'},
-        {name: 'admin6', nickName: 'jack', 'role': '管理员', 'authority': 'averageUser', 'createTime': '2018-5-21', 'modifyTime': '-', 'isDeleted': '有效'},
-        {name: 'admin7', nickName: 'jack', 'role': '管理员', 'authority': 'averageUser', 'createTime': '2018-5-21', 'modifyTime': '-', 'isDeleted': '有效'},
-        {name: 'admin8', nickName: 'jack', 'role': '管理员', 'authority': 'averageUser', 'createTime': '2018-5-21', 'modifyTime': '-', 'isDeleted': '有效'}
+        {name: 'admin1', nickName: 'jack', 'role': '管理员', 'authority': 'averageUser', 'createTime': '2018-5-21', 'modifyTime': '-', 'deleted': '有效'},
+        {name: 'admin2', nickName: 'jack', 'role': '管理员', 'authority': 'averageUser', 'createTime': '2018-5-21', 'modifyTime': '-', 'deleted': '有效'},
+        {name: 'admin3', nickName: 'jack', 'role': '管理员', 'authority': 'averageUser', 'createTime': '2018-5-21', 'modifyTime': '-', 'deleted': '有效'},
+        {name: 'admin4', nickName: 'jack', 'role': '管理员', 'authority': 'averageUser', 'createTime': '2018-5-21', 'modifyTime': '-', 'deleted': '有效'},
+        {name: 'admin5', nickName: 'jack', 'role': '管理员', 'authority': 'averageUser', 'createTime': '2018-5-21', 'modifyTime': '-', 'deleted': '有效'},
+        {name: 'admin6', nickName: 'jack', 'role': '管理员', 'authority': 'averageUser', 'createTime': '2018-5-21', 'modifyTime': '-', 'deleted': '有效'},
+        {name: 'admin7', nickName: 'jack', 'role': '管理员', 'authority': 'averageUser', 'createTime': '2018-5-21', 'modifyTime': '-', 'deleted': '有效'},
+        {name: 'admin8', nickName: 'jack', 'role': '管理员', 'authority': 'averageUser', 'createTime': '2018-5-21', 'modifyTime': '-', 'deleted': '有效'}
       ],
       selectCondition: {
         findByUserName: '',

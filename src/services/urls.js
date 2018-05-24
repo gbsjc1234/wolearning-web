@@ -3,6 +3,7 @@ export default {
   sysManage: 'sysManage',
   addNodeToClassificationTree: '/addNodeToClassificationTree',
   getAllNodes: '/getAllArticalNode',
+  userManage: 'userManage',
   getAllUserAccount: '/getAllUserAccount',
   findUserByCondition: '/findUserByCondition',
   deleteUserAccountByName: '/deleteUserAccountByName',
